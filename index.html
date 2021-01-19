@@ -1,381 +1,372 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <!--Importar la fuente de los íconos de Google-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Importar la hojas de estilos de materialize css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/customColors.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/customColors.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/index.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <title>CaxaFarma</title>
-  </head>
-  <body>
-    <div class="row">
-      <div class="row card-panel barra-superior center teal darken-3">
-        <div class="row">
-          <div class="s12 m3 l3 col">
-            <img src="img/logo.png" class="logo responsive-img">
-          </div>
-          <div class="s12 m6 l6 col">
-            <div class="row " id="container-information">
-              <a href="#" class="white-text text-darken-2">Ubicar tu Botica</a> |
-              <a href="#" class="white-text text-darken-2">Delivery (076-565656)</a>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row card-panel barra-superior center teal darken-3">
+            <div class="row nav-info">
+                <div class="s12 m3 l3 col logo-content">
+                    <img src="img/logo.png" class="logo responsive-img">
+                </div>
+                <div class="s12 m6 l5 col container-info">
+                    <div class="row " id="container-information">
+                        <a href="#" class="white-text text-darken-2">Ubicar tu Botica</a> |
+                        <a href="#" class="white-text text-darken-2">Delivery (076-565656)</a>
+                    </div>
+                    <div class="row container-search">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix white-text ">search</i>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                            <label for="autocomplete-input" class="white-text text-search">Buscar Producto o Marca</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="s12 m3 l4 col" id="container-login">
+                    <div class="row">
+                        <div class="col s6 m6 l6">
+                            <a class="waves-effect btn-login btn teal darken-4" href="login.html"><i class="material-icons left ">person</i>Ingresar</a>
+                        </div>
+                        <div class="col s6 m6 l6">
+                            <a class="waves-effect btn-login btn teal darken-4" href="login.html"> <i class="material-icons left">person_add</i> Registrar</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="switch">
+                            <b>Administrador</b>
+                            <label>
+                            <input type="checkbox">
+                            <span class="lever"></span>
+                          </label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix white-text">search</i>
-                <input type="text" id="autocomplete-input" class="autocomplete">
-                <label for="autocomplete-input" class="white-text">Buscar Producto por Producto o Marca</label>
-              </div>
-            </div>
-          </div>
-          <div class="s12 m3 l3 col" id="container-login">
-            <div class="row">
-              <div class="col s6 m6 l6">
-                <a class="waves-effect btn teal darken-4"href="login.html"><i class="material-icons left ">person</i>Ingresar</a>
-              </div>
-              <div class="col s6 m6 l6">
-                <a class="waves-effect btn teal darken-4"href="login.html"> <i class="material-icons left">person_add</i> Registrar</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="switch">
-                <b>Administrador</b>
-                <label>
-                  <input type="checkbox">
-                  <span class="lever"></span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <nav>
-            <div class="nav-wrapper teal darken-4">
-              <a href="#" class="brand-logo"><img src="img/logo.png" alt="" class="log-nav"> </a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#">Categoria</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</li>
+            <div class="row nav-bar">
+                <nav>
+                    <div class="nav-wrapper teal darken-4">
+                        <a href="#" class="brand-logo"><img src="img/logo.png" alt="" class="log-nav"> </a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul id="nav-mobile" class="left hide-on-med-and-down">
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Ofertas</a></li>
+                            <li><a href="#">Productos</a></li>
+                            <li><a href="#">Contacto</li>
               </ul>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#"><i class="material-icons left">local_shipping</i>Mis Ordenes</a></li>
-                <li><a href="#"><i class="material-icons left">shopping_cart</i>Mi Carrito</a></li>
-              </ul>
+                            <li><a href="#"><i class="material-icons left">shopping_cart</i>Mi Carrito</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <ul class="sidenav teal lighten-5" id="mobile-demo">
+                    <li><a href="#"><i class="material-icons left">view_module</i>Categorias</a></li>
+                    <li><a href="#"><i class="material-icons left">local_offer</i>Ofertas</a></li>
+                    <li><a href="#"><i class="material-icons left">assignment</i>Productos</a></li>
+                    <li><a href="#"><i class="material-icons left">contact_phone</i>Contacto</a></li>
+                    <li><a href="#"><i class="material-icons left">local_shipping</i>Mis Ordenes</a></li>
+                    <li><a href="#"><i class="material-icons left">shopping_cart</i>Mi Carrito</a></li>
+                    <li><a href="#"><i class="material-icons left">person</i>Ingresar</a></li>
+                    <li><a href="#"><i class="material-icons left">person_add</i>Registrar</a></li>
+                    <li><a href="#"><i class="material-icons left">place</i>Ubicar Botica</a></li>
+                    <li><a href="#"><i class="material-icons left">phone_in_talk</i>Delivery</a></li>
+                </ul>
             </div>
-          </nav>
-          <ul class="sidenav teal lighten-5" id="mobile-demo">
-            <li><a href="#"><i class="material-icons left">view_module</i>Categorias</a></li>
-            <li><a href="#"><i class="material-icons left">local_offer</i>Ofertas</a></li>
-            <li><a href="#"><i class="material-icons left">assignment</i>Productos</a></li>
-            <li><a href="#"><i class="material-icons left">contact_phone</i>Contacto</a></li>
-            <li><a href="#"><i class="material-icons left">local_shipping</i>Mis Ordenes</a></li>
-            <li><a href="#"><i class="material-icons left">shopping_cart</i>Mi Carrito</a></li>
-            <li><a href="#"><i class="material-icons left">person</i>Ingresar</a></li>
-            <li><a href="#"><i class="material-icons left">person_add</i>Registrar</a></li>
-            <li><a href="#"><i class="material-icons left">place</i>Ubicar Botica</a></li>
-            <li><a href="#"><i class="material-icons left">phone_in_talk</i>Delivery</a></li>
-          </ul>
         </div>
-      </div>
-      <div class="row">
-        <div class="card l3 col">
+        <div class="row">
+            <div class="card l3 col">
 
-          <div class="card-image contenedor-producto">
-            <img src="img/producto.jpg" class="img-producto">
-            <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
-            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-          </div>
-          <div class="card-title">
-            <p>Agrifen</p>
-          </div>
-          <div class="card-action">
-            <a href="#"><i class="material-icons right">add</i>ver mas</a>
-          </div>
+                <div class="card-image contenedor-producto">
+                    <img src="img/producto.jpg" class="img-producto">
+                    <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                </div>
+                <div class="card-title">
+                    <p>Agrifen</p>
+                </div>
+                <div class="card-action">
+                    <a href="#"><i class="material-icons right">add</i>ver mas</a>
+                </div>
 
-        </div>
-        <div class="card l3 col">
-          <div class="card-image contenedor-producto">
-            <img src="img/producto3.jpg" class="img-producto">
-            <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
-            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-title">
-            <p>Agrifen</p>
-          </div>
-          <div class="card-action">
-            <a href="#"><i class="material-icons right">add</i>ver mas</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image contenedor-producto">
-            <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
-            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-            <img src="img/producto4.jpg" class="img-producto">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-title">
-            <p>Agrifen</p>
-          </div>
-          <div class="card-action">
-           <!-- Modal Trigger -->
-           <a class="waves-effect waves-light modal-trigger" href="#modal1"><i class="right material-icons">add</i>Ver más</a>
-           <!-- Modal Structure -->
-           <div id="modal1" class="modal">
-             <div class="modal-content">
-               <div class="row">
-                 <div class="col l6">
-                   <img src="img/producto4.jpg" class="img-producto">
-                 </div>
-                 <div class="col l6">
-
-                 </div>
-               </div>
-               <div class="row">
-                 <div class="row center">
-                   <h5>Productos Relacionados con tu Compra</h5>
-                 </div>
-                 <div class="row">
-                   <div class="col">
-                     continual aqui
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="modal-footer">
-               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-             </div>
-           </div>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image contenedor-producto">
-            <img src="img/producto5.jpg" class="img-producto">
-            <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
-            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-title">
-            <p>Agrifen</p>
-          </div>
-          <div class="card-action">
-            <a href="#"><i class="material-icons right">add</i>ver mas</a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto6.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto7.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto8.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto9.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto30.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto33.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto34.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto35.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto30.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto33.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto34.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-        <div class="card l3 col">
-          <div class="card-image">
-            <img src="img/producto35.jpg">
-            <span class="card-title large-text blue-text">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
-      <div class="fixed-action-btn hide-on-small-only" style="bottom: 45px; left: : 90vw;">
-        <a class="btn-floating btn-large red">
-          <i class="large material-icons teal darken-4">chat</i>
-        </a>
-      </div>
-      <footer class="page-footer teal darken-3">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Desarrolladores</h5>
-              <ul>
-                <li><i class="material-icons">check_box</i> Alcántara Muñoz Elvis Andair</li>
-                <li><i class="material-icons">check_box</i> Castillo Medina Yomaly</li>
-                <li><i class="material-icons">check_box</i> Geronimo Sanes Alan</li>
-              </ul>
             </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
+            <div class="card l3 col">
+                <div class="card-image contenedor-producto">
+                    <img src="img/producto3.jpg" class="img-producto">
+                    <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-title">
+                    <p>Agrifen</p>
+                </div>
+                <div class="card-action">
+                    <a href="#"><i class="material-icons right">add</i>ver mas</a>
+                </div>
             </div>
-          </div>
+            <div class="card l3 col">
+                <div class="card-image contenedor-producto">
+                    <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    <img src="img/producto4.jpg" class="img-producto">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-title">
+                    <p>Agrifen</p>
+                </div>
+                <div class="card-action">
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light modal-trigger" href="#modal1"><i class="right material-icons">add</i>Ver más</a>
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <div class="row">
+                                <div class="col l6">
+                                    <img src="img/producto4.jpg" class="img-producto">
+                                </div>
+                                <div class="col l6">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row center">
+                                    <h5>Productos Relacionados con tu Compra</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        continual aqui
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image contenedor-producto">
+                    <img src="img/producto5.jpg" class="img-producto">
+                    <a class="left btn-floating halfway-fab waves-effect waves-light red">S/. 8.7</a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-title">
+                    <p>Agrifen</p>
+                </div>
+                <div class="card-action">
+                    <a href="#"><i class="material-icons right">add</i>ver mas</a>
+                </div>
+            </div>
         </div>
-        <div class="footer-copyright teal darken-4">
-          <div class="container">
-          © 2018 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
+        <div class="row">
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto6.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto7.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto8.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto9.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
         </div>
-      </footer>
+        <div class="row">
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto30.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto33.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto34.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto35.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto30.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto33.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto34.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+            <div class="card l3 col">
+                <div class="card-image">
+                    <img src="img/producto35.jpg">
+                    <span class="card-title large-text blue-text">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-action-btn hide-on-small-only" style="bottom: 45px; left: : 90vw;">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons teal darken-4">chat</i>
+            </a>
+        </div>
+        <footer class="page-footer teal darken-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Desarrolladores</h5>
+                        <ul>
+                            <li><i class="material-icons">check_box</i> Alcántara Muñoz Elvis Andair</li>
+                            <li><i class="material-icons">check_box</i> Castillo Medina Yomaly</li>
+                            <li><i class="material-icons">check_box</i> Geronimo Sanes Alan</li>
+                        </ul>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright teal darken-4">
+                <div class="container">
+                    © 2018 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
     </div>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function(){
-        $('.modal').modal();
-      });
-      $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
+        $(document).ready(function() {
+            $('.modal').modal();
+        });
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
     </script>
-  </body>
+</body>
+
 </html>
